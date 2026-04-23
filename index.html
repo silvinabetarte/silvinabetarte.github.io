@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Silvina Betarte · Senior UX/UI Designer</title>
+  <meta name="description" content="Portafolio profesional de Silvina Betarte, Senior UX/UI Designer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- STACK LAYERS for mobile menu 3D effect -->
+  <div class="stack-layer stack-layer--3" aria-hidden="true"></div>
+  <div class="stack-layer stack-layer--2" aria-hidden="true"></div>
+
+  <!-- SIDE MENU (always visible on desktop, drawer on mobile) -->
+  <nav class="side-menu" id="sideMenu" aria-label="Navegación principal">
+    <div class="side-menu__header">
+      <div class="side-menu__avatar"><span>SB</span></div>
+      <div class="side-menu__info">
+        <strong class="side-menu__name">Silvina Betarte</strong>
+        <span class="side-menu__role">Senior UX/UI Designer</span>
+      </div>
+    </div>
+
+    <ul class="side-menu__nav">
+      <li><button class="smenu-item active" data-section="perfil" aria-current="page">
+        <span class="smenu-item__ico"><i data-lucide="user-round"></i></span>
+        <span class="smenu-item__label">Perfil</span>
+        <i data-lucide="chevron-right" class="smenu-item__arr" aria-hidden="true"></i>
+      </button></li>
+      <li><button class="smenu-item" data-section="trabajo">
+        <span class="smenu-item__ico"><i data-lucide="briefcase"></i></span>
+        <span class="smenu-item__label">Trabajo</span>
+        <i data-lucide="chevron-right" class="smenu-item__arr" aria-hidden="true"></i>
+      </button></li>
+      <li><button class="smenu-item" data-section="formacion">
+        <span class="smenu-item__ico"><i data-lucide="graduation-cap"></i></span>
+        <span class="smenu-item__label">Formación</span>
+        <i data-lucide="chevron-right" class="smenu-item__arr" aria-hidden="true"></i>
+      </button></li>
+      <li><button class="smenu-item" data-section="contacto">
+        <span class="smenu-item__ico"><i data-lucide="send"></i></span>
+        <span class="smenu-item__label">Contacto</span>
+        <i data-lucide="chevron-right" class="smenu-item__arr" aria-hidden="true"></i>
+      </button></li>
+    </ul>
+
+    <div class="side-menu__footer">
+      <button class="avail-footer-btn" id="availSidebarBtn" aria-label="Ir a contacto">
+        <span class="dot dot--pulse"></span>
+        <span>Disponible para proyectos</span>
+        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HOVER PREVIEW PANEL (desktop only) -->
+  <div class="hover-preview" id="hoverPreview" aria-hidden="true" role="tooltip"></div>
+
+  <!-- APP SHELL -->
+  <div class="app-shell" id="appShell">
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <div class="top-bar__logo" aria-label="Silvina Betarte">SB</div>
+      <div class="top-bar__title" id="topBarTitle">Portfolio</div>
+      <div class="top-bar__actions">
+        <div class="avail-pill">
+          <span class="dot dot--pulse"></span>
+          <span>Disponible</span>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SCROLLABLE CONTENT -->
+    <main class="content" id="contentArea">
+
+      <!-- ═══ PERFIL ═══ -->
+      <section class="page active" id="page-perfil" data-title="Portfolio">
+        <div class="profile-hero">
+          <div class="profile-hero__shape" aria-hidden="true"></div>
+          <div class="profile-hero__av-wrap">
+            <div class="profile-hero__av"><span>SB</span></div>
+            <div class="profile-hero__badge" aria-hidden="true"><i data-lucide="sparkles"></i></div>
+          </div>
+          <h1 class="profile-hero__name">Silvina<br><em>Betarte</em></h1>
+          <p class="profile-hero__title">SENIOR UX/UI DESIGNER<br><span>LEAD DISEÑO DIGITAL</span></p>
+          <div class="stats-row">
+            <div class="stat"><span class="stat__n">10+</span><span class="stat__l">Años exp.</span></div>
+            <div class="stat-div" aria-hidden="true"></div>
+            <div class="stat"><span class="stat__n">50+</span><span class="stat__l">Proyectos</span></div>
+            <div class="stat-div" aria-hidden="true"></div>
+            <div class="stat"><span class="stat__n">WCAG</span><span class="stat__l">Certificada</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">Sobre mí</div>
+          <p class="body-text">Estratega digital con más de <strong>10 años en Telefónica Movistar</strong>. Especialista en transformar necesidades complejas de negocio en experiencias de alta conversión y accesibilidad.</p>
+          <p class="body-text" style="margin-top:8px">Experta certificada ITBA y Scrum Master. Dominio avanzado de Figma y desarrollo No-Code con FlutterFlow.</p>
+          <div class="tag-row">
+            <span class="tag">Figma</span><span class="tag">FlutterFlow</span>
+            <span class="tag">Scrum</span><span class="tag">WCAG A11y</span><span class="tag">UX Research</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">Herramientas &amp; Skills</div>
+          <div class="tools-grid">
+            <div class="tool"><div class="tool__ico"><i data-lucide="pen-tool"></i></div><span>Figma</span></div>
+            <div class="tool"><div class="tool__ico"><i data-lucide="smartphone"></i></div><span>FlutterFlow</span></div>
+            <div class="tool"><div class="tool__ico"><i data-lucide="layers"></i></div><span>Adobe Suite</span></div>
+            <div class="tool"><div class="tool__ico"><i data-lucide="git-branch"></i></div><span>Scrum/Kanban</span></div>
+            <div class="tool"><div class="tool__ico"><i data-lucide="accessibility"></i></div><span>A11y WCAG</span></div>
+            <div class="tool"><div class="tool__ico"><i data-lucide="search"></i></div><span>UX Research</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TRABAJO ═══ -->
+      <section class="page" id="page-trabajo" data-title="Trabajo">
+        <div class="page-header">
+          <h2 class="page-title">Experiencia</h2>
+          <p class="page-sub">Trayectoria profesional destacada</p>
+        </div>
+
+        <div class="exp-block">
+          <span class="time-pill">Ene. 2022 – Actualidad</span>
+          <div class="card">
+            <div class="exp-head">
+              <div class="exp-ico exp-ico--salmon"><i data-lucide="user-round"></i></div>
+              <div><p class="exp-co">Independiente / Freelance</p><p class="exp-role">Consultora UX/UI Senior</p></div>
+            </div>
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="heart-pulse"></i>Alianza de Pacientes Uruguay</p>
+              <p class="body-text">Rediseño integral del ecosistema digital con foco en <strong>accesibilidad (A11y)</strong> y arquitectura de información para más de 50 organizaciones.</p>
+            </div>
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="cpu"></i>AppPet</p>
+              <p class="body-text">Diseño y prototipado de apps de alta fidelidad con FlutterFlow, integrando lógica de negocio y diseño visual.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-block">
+          <span class="time-pill">Nov. 2019 – Dic. 2025</span>
+          <div class="card">
+            <div class="exp-head">
+              <div class="exp-ico exp-ico--blue"><i data-lucide="signal"></i></div>
+              <div><p class="exp-co">Telefónica Movistar</p><p class="exp-role">UX/UI Lead &amp; Coordinadora Digital</p></div>
+            </div>
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="trending-up"></i>Optimización de Producto</p>
+              <p class="body-text">Lideré el rediseño de flujos en la App E-care, mejorando usabilidad y tasa de autogestión.</p>
+            </div>
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="shopping-cart"></i>E-commerce</p>
+              <p class="body-text">Mejoras de interfaz para canal online, reduciendo fricción y aumentando conversión.</p>
+            </div>
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="users"></i>Gestión Ágil</p>
+              <p class="body-text">Coordiné delivery de diseño en equipos Scrum, alineando objetivos de negocio y UX.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-block">
+          <span class="time-pill">Ago. 2012 – Oct. 2019</span>
+          <div class="card">
+            <div class="exp-head">
+              <div class="exp-ico exp-ico--blue"><i data-lucide="signal"></i></div>
+              <div><p class="exp-co">Telefónica Movistar</p><p class="exp-role">Diseñadora Web &amp; Gráfica</p></div>
+            </div>
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="monitor"></i>Soluciones de Intranet</p>
+              <p class="body-text">Plataformas y herramientas digitales internas que optimizaron la operativa de colaboradores.</p>
+            </div>
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="headset"></i>Eficiencia en Atención</p>
+              <p class="body-text">Interfaces para atención al cliente que mejoraron tiempos de respuesta y experiencia del usuario.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ FORMACIÓN ═══ -->
+      <section class="page" id="page-formacion" data-title="Formación">
+        <div class="page-header">
+          <h2 class="page-title">Formación</h2>
+          <p class="page-sub">Educación y certificaciones</p>
+        </div>
+
+        <div class="edu-grid">
+          <div class="edu-card edu-card--dark">
+            <div class="edu-ico"><i data-lucide="award"></i></div>
+            <span class="edu-tag">COMPLETADO</span>
+            <strong class="edu-title">Experto UX/UI</strong>
+            <span class="edu-sub">ITBA (Instituto Tecnológico de Buenos Aires)</span>
+          </div>
+          
+          <div class="edu-card edu-card--dark">
+            <div class="edu-ico"><i data-lucide="zap"></i></div>
+            <span class="edu-tag">En curso</span>
+            <strong class="edu-title">Experto Desarrollo Web Fullstack</strong>
+            <span class="edu-sub">IBEC</span>
+          </div>
+                    
+          <div class="edu-card">
+            <div class="edu-ico"><i data-lucide="code-2"></i></div>
+            <span class="edu-tag">Certificación</span>
+            <strong class="edu-title">Scrum Master Padawan</strong>
+            <span class="edu-sub">Telefonica · Hispam</span>
+          </div>
+          <div class="edu-card">
+            <div class="edu-ico"><i data-lucide="database"></i></div>
+            <span class="edu-tag">Completado</span>
+            <strong class="edu-title">Desarrollo Web</strong>
+            <span class="edu-sub">PHP &amp; MySQL · BIOS</span>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <div class="card__label">Conocimientos Técnicos</div>
+          <div class="skills-list">
+            <div class="skill-row">
+              <div class="skill-lbl"><i data-lucide="accessibility"></i>Accesibilidad Web (A11y) · WCAG</div>
+              <div class="skill-bar"><div class="skill-fill" style="--pct:95%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-lbl"><i data-lucide="layers"></i>Arquitectura de Información &amp; UX Research</div>
+              <div class="skill-bar"><div class="skill-fill" style="--pct:92%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-lbl"><i data-lucide="flask-conical"></i>Análisis y Pruebas de Usuario (UAT)</div>
+              <div class="skill-bar"><div class="skill-fill" style="--pct:88%"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-lbl"><i data-lucide="pen-tool"></i>Figma · Adobe Suite · FlutterFlow</div>
+              <div class="skill-bar"><div class="skill-fill" style="--pct:97%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERRAMIENTAS Y CONOCIMIENTOS -->
+        <div class="card">
+          <div class="card__label">Herramientas y Conocimientos</div>
+
+          <div class="know-group">
+            <div class="know-group__header">
+              <span class="know-group__ico"><i data-lucide="pen-tool"></i></span>
+              <span class="know-group__title">Especialización técnica</span>
+            </div>
+            <ul class="know-list">
+              <li><span class="know-cat">Diseño de Producto</span> Figma (Avanzado, Design Systems, Auto-layout), Adobe Suite (Ps, Ai, Ae).</li>
+              <li><span class="know-cat">Desarrollo No-Code &amp; Web</span> FlutterFlow Expert, CMS, PHP/MySQL, JavaScript, HTML y CSS.</li>
+              <li><span class="know-cat">Metodologías Ágiles</span> Scrum Master (Certified), Kanban, Lean UX, Design Thinking.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- OTRAS CERTIFICACIONES -->
+        <div class="card">
+          <div class="card__label">Otras Certificaciones</div>
+
+          <div class="cert-group">
+            <div class="cert-group__header">
+              <span class="cert-group__ico cert-group__ico--salmon"><i data-lucide="layout-template"></i></span>
+              <span class="cert-group__title">Diseño y Producto (UX/UI)</span>
+            </div>
+            <ul class="cert-list">
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>Diseño UX: Experiencia de Usuario + Figma <span class="cert-source">Udemy · 2023</span></span>
+              </li>
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>Creación de Interfaces con Figma <span class="cert-source">Udemy · 2023</span></span>
+              </li>
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>UX: Leyes y Fundamentos <span class="cert-source">Udemy · 2024</span></span>
+              </li>
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>Certificación Avanzada en UX-UI Expert <span class="cert-source">Academia de Relacionamiento Digital (Movistar) · 2024</span></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cert-group">
+            <div class="cert-group__header">
+              <span class="cert-group__ico cert-group__ico--blue"><i data-lucide="trending-up"></i></span>
+              <span class="cert-group__title">Estrategia y Negocio Digital</span>
+            </div>
+            <ul class="cert-list">
+              <li>
+                <span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
+                <span>Pensamiento Crítico con IA (Critical Thinking with AI) <span class="cert-source">Udemy · 2025</span></span>
+              </li>
+              <li>
+                <span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
+                <span>Branding: Marca, Logotipo, Naming y Marketing <span class="cert-source">Udemy · 2025</span></span>
+              </li>
+              <li>
+                <span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
+                <span>Copywriting para Negocios Online <span class="cert-source">Udemy · 2025</span></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cert-group">
+            <div class="cert-group__header">
+              <span class="cert-group__ico cert-group__ico--amber"><i data-lucide="users"></i></span>
+              <span class="cert-group__title">Liderazgo y Soft Skills</span>
+            </div>
+            <ul class="cert-list">
+              <li>
+                <span class="cert-dot cert-dot--amber" aria-hidden="true"></span>
+                <span>Liderazgo y Gestión de Equipos <span class="cert-source">Udemy · 2024</span></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ═══ CONTACTO ═══ -->
+      <section class="page" id="page-contacto" data-title="Contacto">
+        <div class="page-header">
+          <h2 class="page-title">Contacto</h2>
+          <p class="page-sub">Estoy disponible para nuevos proyectos</p>
+        </div>
+
+        <div class="contact-grid">
+          <a href="mailto:silvinabetarte@gmail.com" class="ctile" aria-label="Enviar email">
+            <div class="ctile__ico ctile__ico--salmon"><i data-lucide="mail"></i></div>
+            <div class="ctile__lbl">Email</div>
+            <div class="ctile__val">silvinabetarte@gmail.com</div>
+            <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
+          </a>
+          <a href="https://linkedin.com/in/silvina-betarte-ux-ui" target="_blank" rel="noopener" class="ctile" aria-label="LinkedIn">
+            <div class="ctile__ico ctile__ico--blue"><i data-lucide="linkedin"></i></div>
+            <div class="ctile__lbl">LinkedIn</div>
+            <div class="ctile__val">silvina-betarte-ux-ui</div>
+            <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
+          </a>
+          <a href="tel:+59895700457" class="ctile" aria-label="Llamar">
+            <div class="ctile__ico ctile__ico--green"><i data-lucide="phone"></i></div>
+            <div class="ctile__lbl">Teléfono</div>
+            <div class="ctile__val">+598 95700457</div>
+            <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="ctile ctile--accent" aria-label="Ver portfolio">
+            <div class="ctile__ico ctile__ico--white"><i data-lucide="layout-dashboard"></i></div>
+            <div class="ctile__lbl">Portfolio</div>
+            <div class="ctile__val">Portfolio Interactivo</div>
+            <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="card location-row">
+          <div class="location-ico"><i data-lucide="map-pin"></i></div>
+          <div>
+            <div class="location-title">Ubicación</div>
+            <div class="location-val">Uruguay · Disponible remoto global</div>
+          </div>
+        </div>
+
+        <!-- CTA Hero -->
+        <div class="contact-cta">
+          <div class="contact-cta__av"><span>SB</span></div>
+          <p class="contact-cta__text">¿Tenés un proyecto en mente? <strong>¡Hablemos!</strong></p>
+          <div class="avail-green"><span class="dot dot--pulse"></span>Disponible para proyectos</div>
+          <button class="open-form-btn" id="openFormBtn" aria-expanded="false" aria-controls="contactForm">
+            <i data-lucide="mail"></i>
+            Enviame un mensaje
+            <i data-lucide="chevron-down" class="chevron-icon" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- Contact Form (accordion) -->
+        <div class="cf-wrap" id="contactForm" aria-hidden="true">
+          <div class="card cf-card">
+            <div class="card__label">Enviame un mensaje</div>
+            <div class="cf-fields">
+              <div class="cf-row">
+                <div class="cf-field">
+                  <label class="cf-label" for="cf-name">Nombre <span class="cf-req" aria-hidden="true">*</span></label>
+                  <input class="cf-input" id="cf-name" type="text" placeholder="Tu nombre completo" autocomplete="name" />
+                </div>
+                <div class="cf-field">
+                  <label class="cf-label" for="cf-email">Email <span class="cf-req" aria-hidden="true">*</span></label>
+                  <input class="cf-input" id="cf-email" type="email" placeholder="tu@email.com" autocomplete="email" />
+                </div>
+              </div>
+              <div class="cf-field">
+                <label class="cf-label" for="cf-subject">Asunto</label>
+                <input class="cf-input" id="cf-subject" type="text" placeholder="¿De qué se trata?" />
+              </div>
+              <div class="cf-field">
+                <label class="cf-label" for="cf-message">Mensaje <span class="cf-req" aria-hidden="true">*</span></label>
+                <textarea class="cf-textarea" id="cf-message" placeholder="Contame sobre tu proyecto…"></textarea>
+              </div>
+            </div>
+            <div class="cf-status" id="cfStatus" aria-live="polite" aria-atomic="true"></div>
+            <button class="cf-submit" id="cfSubmitBtn">
+              <i data-lucide="send"></i>
+              Enviar mensaje
+            </button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- TAB BAR -->
+    <nav class="tab-bar" role="tablist" aria-label="Secciones">
+      <button class="tab active" data-section="perfil" role="tab" aria-selected="true" aria-label="Perfil">
+        <span class="tab__ring" aria-hidden="true"></span>
+        <span class="tab__ico" aria-hidden="true"><i data-lucide="user-round"></i></span>
+        <span class="tab__lbl">Perfil</span>
+      </button>
+      <button class="tab" data-section="trabajo" role="tab" aria-selected="false" aria-label="Trabajo">
+        <span class="tab__ring" aria-hidden="true"></span>
+        <span class="tab__ico" aria-hidden="true"><i data-lucide="briefcase"></i></span>
+        <span class="tab__lbl">Trabajo</span>
+      </button>
+      <button class="tab" data-section="formacion" role="tab" aria-selected="false" aria-label="Formación">
+        <span class="tab__ring" aria-hidden="true"></span>
+        <span class="tab__ico" aria-hidden="true"><i data-lucide="graduation-cap"></i></span>
+        <span class="tab__lbl">Formación</span>
+      </button>
+      <button class="tab" data-section="contacto" role="tab" aria-selected="false" aria-label="Contacto">
+        <span class="tab__ring" aria-hidden="true"></span>
+        <span class="tab__ico" aria-hidden="true"><i data-lucide="send"></i></span>
+        <span class="tab__lbl">Contacto</span>
+      </button>
+    </nav>
+
+    <!-- OVERLAY (mobile only) -->
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
