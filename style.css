@@ -124,11 +124,11 @@ img { display:block; max-width:100%; }
   position:fixed; inset:0;
   display:flex; flex-direction:column;
   background:var(--bg); z-index:100;
+  overflow:hidden; /* clip content correctly */
   transform-origin:left center;
   transition: transform var(--dur) var(--ease-out),
               border-radius var(--dur) ease,
               box-shadow var(--dur) ease;
-  /* NO overflow:hidden here — tab bar circle must be allowed to protrude */
 }
 
 /* Mobile: menu open → shell shrinks right */
@@ -185,7 +185,9 @@ img { display:block; max-width:100%; }
 
 /* ── CONTENT AREA ── */
 .content {
-  flex:1; overflow-y:auto; overflow-x:hidden;
+  flex:1;
+  min-height:0; /* CRITICAL: without this, flex children won't scroll in some browsers */
+  overflow-y:auto; overflow-x:hidden;
   -webkit-overflow-scrolling:touch;
   padding:18px 16px calc(var(--tabbar-h) + 16px);
   scroll-behavior:smooth;
@@ -671,10 +673,9 @@ img { display:block; max-width:100%; }
     left:var(--sidebar-w); top:0; right:0; bottom:0;
     width:calc(100% - var(--sidebar-w));
     border-radius:20px 0 0 20px;
-    /* no transition needed — sidebar is static */
     transform:none !important;
     box-shadow:none;
-    overflow:visible;
+    overflow:hidden; /* clip correctly on desktop */
   }
 
   /* No menu-open effect on desktop */
