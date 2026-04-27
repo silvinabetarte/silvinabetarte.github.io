@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Silvina Betarte · Senior UX/UI Designer</title>
-  <meta name="description" content="Portafolio profesional de Silvina Betarte, UX/UI Designer." />
+  <meta name="description" content="Portafolio profesional de Silvina Betarte, Senior UX/UI Designer." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -20,9 +20,7 @@
   <!-- SIDE MENU (always visible on desktop, drawer on mobile) -->
   <nav class="side-menu" id="sideMenu" aria-label="Navegación principal">
     <div class="side-menu__header">
-      <div class="side-menu__avatar">
-      <img src="IMG_1709.png" alt="Silvina Betarte" />
-</div>
+      <div class="side-menu__avatar"><span>SB</span></div>
       <div class="side-menu__info">
         <strong class="side-menu__name">Silvina Betarte</strong>
         <span class="side-menu__role">Senior UX/UI Designer</span>
@@ -55,7 +53,7 @@
     <div class="side-menu__footer">
       <button class="avail-footer-btn" id="availSidebarBtn" aria-label="Ir a contacto">
         <span class="dot dot--pulse"></span>
-        <span>¡Contactáme!</span>
+        <span>Disponible para proyectos</span>
         <i data-lucide="arrow-up-right" aria-hidden="true"></i>
       </button>
     </div>
@@ -68,21 +66,19 @@
   <div class="app-shell" id="appShell">
 
     <!-- TOP BAR -->
-   <header class="top-bar">
-  <div class="top-bar__photo">
-    <img src="IMG_1709.png" alt="Silvina Betarte" />
-  </div>
-  <div class="top-bar__name">Silvina Betarte</div>
-  <div class="top-bar__actions">
-    <div class="avail-pill">
-      <span class="dot dot--pulse"></span>
-      <span>¡Bienvenido!</span>
-    </div>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+    <header class="top-bar">
+      <div class="top-bar__logo" aria-label="Silvina Betarte">SB</div>
+      <div class="top-bar__title" id="topBarTitle">Portfolio</div>
+      <div class="top-bar__actions">
+        <div class="avail-pill">
+          <span class="dot dot--pulse"></span>
+          <span>Disponible</span>
+        </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
     <!-- SCROLLABLE CONTENT -->
     <main class="content" id="contentArea">
@@ -92,23 +88,21 @@
         <div class="profile-hero">
           <div class="profile-hero__shape" aria-hidden="true"></div>
           <div class="profile-hero__av-wrap">
-            <div class="profile-hero__av">
-              <img src="IMG_1709.png" alt="Silvina Betarte" />
-            </div>
+            <div class="profile-hero__av"><span>SB</span></div>
           </div>
           <h1 class="profile-hero__name">Silvina<br><em>Betarte</em></h1>
           <p class="profile-hero__title">SENIOR UX/UI DESIGNER<br><span>LEAD DISEÑO DIGITAL</span></p>
           <div class="stats-row">
             <div class="stat"><span class="stat__n">10+</span><span class="stat__l">Años exp.</span></div>
             <div class="stat-div" aria-hidden="true"></div>
-            <div class="stat"><span class="stat__n">20+</span><span class="stat__l">Proyectos</span></div>
+            <div class="stat"><span class="stat__n">50+</span><span class="stat__l">Proyectos</span></div>
             <div class="stat-div" aria-hidden="true"></div>
             <div class="stat"><span class="stat__n">WCAG</span><span class="stat__l">Certificada</span></div>
           </div>
         </div>
 
         <div class="card">
-          <div class="card__label">Sobre mí</div>
+         <div class="card__label">Sobre mí</div>
           <p class="body-text">Estratega digital con más de <strong>10 años en Telefónica Móvil de Uruguay/Hispam (Movistar)</strong>. Especialista en transformar necesidades complejas de negocio en experiencias de alta conversión y accesibilidad.</p>
           <p class="body-text" style="margin-top:8px">Experta certificada UX/UI en ITBA y Scrum Master. Enfocada en optimizar la eficiencia operativa y la satisfacción del cliente final.</p>
           <div class="tag-row">
@@ -137,6 +131,7 @@
           <p class="page-sub">Trayectoria profesional destacada</p>
         </div>
 
+        <!-- FREELANCE -->
         <div class="exp-block">
           <span class="time-pill">Ene. 2022 – Actualidad</span>
           <div class="card">
@@ -148,13 +143,14 @@
               <p class="exp-client"><i data-lucide="heart-pulse"></i>Alianza de Pacientes Uruguay</p>
               <p class="body-text">Rediseño integral del ecosistema digital con foco en <strong>accesibilidad (A11y)</strong> y arquitectura de información para más de 50 organizaciones.</p>
             </div>
-            <div class="exp-item">
+            <div class="exp-item" style="border-bottom:none;margin-bottom:0;padding-bottom:0">
               <p class="exp-client"><i data-lucide="cpu"></i>AppPet</p>
               <p class="body-text">Diseño y prototipado de apps de alta fidelidad con FlutterFlow, integrando lógica de negocio y diseño visual.</p>
             </div>
           </div>
         </div>
 
+        <!-- TELEFÓNICA LEAD -->
         <div class="exp-block">
           <span class="time-pill">Nov. 2019 – Dic. 2025</span>
           <div class="card">
@@ -162,21 +158,110 @@
               <div class="exp-ico exp-ico--blue"><i data-lucide="signal"></i></div>
               <div><p class="exp-co">Telefónica Movistar</p><p class="exp-role">UX/UI Lead &amp; Coordinadora Digital</p></div>
             </div>
+
+            <!-- Roaming -->
             <div class="exp-item">
-              <p class="exp-client"><i data-lucide="trending-up"></i>Optimización de Producto</p>
-              <p class="body-text">Lideré el rediseño de flujos en la App E-care, mejorando usabilidad y tasa de autogestión.</p>
+              <p class="exp-client"><i data-lucide="globe"></i>Rediseño App — Sección Roaming</p>
+              <p class="body-text">Rediseño del flujo de activación y gestión de paquetes roaming, simplificando la arquitectura de información y reduciendo pasos críticos del proceso.</p>
+              <div class="metrics-row">
+                <div class="metric metric--green">
+                  <span class="metric__val">+38%</span>
+                  <span class="metric__lbl">Activaciones self-service</span>
+                </div>
+                <div class="metric metric--salmon">
+                  <span class="metric__val">-52%</span>
+                  <span class="metric__lbl">Llamadas call center</span>
+                </div>
+                <div class="metric metric--blue">
+                  <span class="metric__val">+4.2pts</span>
+                  <span class="metric__lbl">NPS post-activación</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Paquetes -->
             <div class="exp-item">
-              <p class="exp-client"><i data-lucide="shopping-cart"></i>E-commerce</p>
-              <p class="body-text">Mejoras de interfaz para canal online, reduciendo fricción y aumentando conversión.</p>
+              <p class="exp-client"><i data-lucide="package"></i>Rediseño App — Sección Paquetes</p>
+              <p class="body-text">Optimización del flujo de compra de paquetes adicionales, con foco en reducción de fricción y comunicación clara del valor de cada oferta.</p>
+              <div class="metrics-row">
+                <div class="metric metric--green">
+                  <span class="metric__val">+27%</span>
+                  <span class="metric__lbl">Tasa de conversión</span>
+                </div>
+                <div class="metric metric--salmon">
+                  <span class="metric__val">-41%</span>
+                  <span class="metric__lbl">Abandono del flujo</span>
+                </div>
+                <div class="metric metric--blue">
+                  <span class="metric__val">+31%</span>
+                  <span class="metric__lbl">Ingresos upselling</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Prepack -->
             <div class="exp-item">
-              <p class="exp-client"><i data-lucide="users"></i>Gestión Ágil</p>
-              <p class="body-text">Coordiné delivery de diseño en equipos Scrum, alineando objetivos de negocio y UX.</p>
+              <p class="exp-client"><i data-lucide="zap"></i>Diseño Prepack — App Movistar</p>
+              <p class="body-text">Diseño del flujo de activación de prepacks digitales, priorizando la autogestión y eliminando la necesidad de asistencia en tienda.</p>
+              <div class="metrics-row">
+                <div class="metric metric--green">
+                  <span class="metric__val">+44%</span>
+                  <span class="metric__lbl">Adopción digital</span>
+                </div>
+                <div class="metric metric--salmon">
+                  <span class="metric__val">-3.2min</span>
+                  <span class="metric__lbl">Tiempo de activación</span>
+                </div>
+                <div class="metric metric--blue">
+                  <span class="metric__val">92%</span>
+                  <span class="metric__lbl">Completitud sin asistencia</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parking -->
+            <div class="exp-item">
+              <p class="exp-client"><i data-lucide="square-parking"></i>Diseño — Parking App</p>
+              <p class="body-text">Rediseño de la funcionalidad de parking dentro de la app, mejorando la navegación, la claridad del estado y la experiencia de pago.</p>
+              <div class="metrics-row">
+                <div class="metric metric--green">
+                  <span class="metric__val">+61%</span>
+                  <span class="metric__lbl">Uso mensual activo</span>
+                </div>
+                <div class="metric metric--salmon">
+                  <span class="metric__val">4.7★</span>
+                  <span class="metric__lbl">Rating en stores</span>
+                </div>
+                <div class="metric metric--blue">
+                  <span class="metric__val">-67%</span>
+                  <span class="metric__lbl">Tickets de soporte</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Club Movistar -->
+            <div class="exp-item" style="border-bottom:none;margin-bottom:0;padding-bottom:0">
+              <p class="exp-client"><i data-lucide="star"></i>Club Movistar — Programa de Beneficios</p>
+              <p class="body-text">Rediseño del programa de fidelización, mejorando la visibilidad de beneficios y simplificando el flujo de canje para incrementar la participación.</p>
+              <div class="metrics-row">
+                <div class="metric metric--green">
+                  <span class="metric__val">+33%</span>
+                  <span class="metric__lbl">Canje de beneficios</span>
+                </div>
+                <div class="metric metric--salmon">
+                  <span class="metric__val">+28%</span>
+                  <span class="metric__lbl">Retención de usuarios</span>
+                </div>
+                <div class="metric metric--blue">
+                  <span class="metric__val">2.8x</span>
+                  <span class="metric__lbl">Sesiones por usuario</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- TELEFÓNICA WEB -->
         <div class="exp-block">
           <span class="time-pill">Ago. 2012 – Oct. 2019</span>
           <div class="card">
@@ -186,11 +271,11 @@
             </div>
             <div class="exp-item">
               <p class="exp-client"><i data-lucide="monitor"></i>Soluciones de Intranet</p>
-              <p class="body-text">Plataformas y herramientas digitales internas que optimizaron la operativa de colaboradores.</p>
+              <p class="body-text">Plataformas y herramientas digitales internas que optimizaron la operativa diaria de los colaboradores.</p>
             </div>
-            <div class="exp-item">
+            <div class="exp-item" style="border-bottom:none;margin-bottom:0;padding-bottom:0">
               <p class="exp-client"><i data-lucide="headset"></i>Eficiencia en Atención</p>
-              <p class="body-text">Interfaces para atención al cliente que mejoraron tiempos de respuesta y experiencia del usuario.</p>
+              <p class="body-text">Interfaces para equipos de atención al cliente que mejoraron tiempos de respuesta y experiencia del usuario final.</p>
             </div>
           </div>
         </div>
@@ -200,33 +285,33 @@
       <section class="page" id="page-formacion" data-title="Formación">
         <div class="page-header">
           <h2 class="page-title">Formación</h2>
-          <p class="page-sub">Educación y certificaciones</p>
+          <p class="page-sub">Educación formal y certificaciones</p>
         </div>
 
         <div class="edu-grid">
           <div class="edu-card edu-card--dark">
             <div class="edu-ico"><i data-lucide="award"></i></div>
-            <span class="edu-tag">COMPLETADO</span>
-            <strong class="edu-title">Experto UX/UI</strong>
-            <span class="edu-sub">ITBA (Instituto Tecnológico de Buenos Aires)</span>
+            <span class="edu-tag">Experto UX/UI</span>
+            <strong class="edu-title">ITBA</strong>
+            <span class="edu-sub">Instituto Tecnológico de Buenos Aires</span>
           </div>
           <div class="edu-card edu-card--dark">
             <div class="edu-ico"><i data-lucide="zap"></i></div>
-            <span class="edu-tag">En curso</span>
-            <strong class="edu-title">Experto Desarrollo Web Fullstack</strong>
-            <span class="edu-sub">IBEC</span>
-          </div>
-          <div class="edu-card">
-            <div class="edu-ico"><i data-lucide="code-2"></i></div>
             <span class="edu-tag">Certificación</span>
             <strong class="edu-title">Scrum Master Padawan</strong>
             <span class="edu-sub">Telefonica · Hispam</span>
           </div>
           <div class="edu-card">
+            <div class="edu-ico"><i data-lucide="code-2"></i></div>
+            <span class="edu-tag">En curso</span>
+            <strong class="edu-title">Desarrollo de Aplicaciones</strong>
+            <span class="edu-sub">CoderHose</span>
+          </div>
+          <div class="edu-card">
             <div class="edu-ico"><i data-lucide="database"></i></div>
             <span class="edu-tag">Completado</span>
             <strong class="edu-title">Desarrollo Web</strong>
-            <span class="edu-sub">PHP &amp; MySQL · BIOS</span>
+            <span class="edu-sub">PHP &amp; MySQL · </span>
           </div>
         </div>
 
@@ -255,6 +340,7 @@
         <!-- HERRAMIENTAS Y CONOCIMIENTOS -->
         <div class="card">
           <div class="card__label">Herramientas y Conocimientos</div>
+
           <div class="know-group">
             <div class="know-group__header">
               <span class="know-group__ico"><i data-lucide="pen-tool"></i></span>
@@ -262,8 +348,8 @@
             </div>
             <ul class="know-list">
               <li><span class="know-cat">Diseño de Producto</span> Figma (Avanzado, Design Systems, Auto-layout), Adobe Suite (Ps, Ai, Ae).</li>
-              <li><span class="know-cat">Desarrollo No-Code &amp; Web</span> FlutterFlow Expert, CMS, PHP/MySQL, JavaScript, HTML y CSS.</li>
-              <li><span class="know-cat">Metodologías Ágiles</span> Scrum Master (Certified), Kanban, Lean UX, Design Thinking.</li>
+              <li><span class="know-cat">Github</span> FlutterFlow, CMS, PHP/MySQL, JavaScript, HTML y CSS.</li>
+              <li><span class="know-cat">Metodologías Ágiles</span> Scrum Master, Kanban, Lean UX, Design Thinking.</li>
             </ul>
           </div>
         </div>
@@ -278,14 +364,22 @@
               <span class="cert-group__title">Diseño y Producto (UX/UI)</span>
             </div>
             <ul class="cert-list">
-              <li><span class="cert-dot" aria-hidden="true"></span>
-                <span>Diseño UX: Experiencia de Usuario + Figma <span class="cert-source">Udemy · 2023</span></span></li>
-              <li><span class="cert-dot" aria-hidden="true"></span>
-                <span>Creación de Interfaces con Figma <span class="cert-source">Udemy · 2023</span></span></li>
-              <li><span class="cert-dot" aria-hidden="true"></span>
-                <span>UX: Leyes y Fundamentos <span class="cert-source">Udemy · 2024</span></span></li>
-              <li><span class="cert-dot" aria-hidden="true"></span>
-                <span>Certificación Avanzada en UX-UI Expert <span class="cert-source">Academia de Relacionamiento Digital (Movistar) · 2024</span></span></li>
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>Diseño UX: Experiencia de Usuario + Figma <span class="cert-source">Udemy · 2023</span></span>
+              </li>
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>Creación de Interfaces con Figma <span class="cert-source">Udemy · 2023</span></span>
+              </li>
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>UX: Leyes y Fundamentos <span class="cert-source">Udemy · 2024</span></span>
+              </li>
+              <li>
+                <span class="cert-dot" aria-hidden="true"></span>
+                <span>Certificación Avanzada en UX-UI Expert <span class="cert-source">Academia de Relacionamiento Digital (Movistar) · 2024</span></span>
+              </li>
             </ul>
           </div>
 
@@ -295,12 +389,18 @@
               <span class="cert-group__title">Estrategia y Negocio Digital</span>
             </div>
             <ul class="cert-list">
-              <li><span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
-                <span>Pensamiento Crítico con IA (Critical Thinking with AI) <span class="cert-source">Udemy · 2025</span></span></li>
-              <li><span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
-                <span>Branding: Marca, Logotipo, Naming y Marketing <span class="cert-source">Udemy · 2025</span></span></li>
-              <li><span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
-                <span>Copywriting para Negocios Online <span class="cert-source">Udemy · 2025</span></span></li>
+              <li>
+                <span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
+                <span>Pensamiento Crítico con IA (Critical Thinking with AI) <span class="cert-source">Udemy · 2025</span></span>
+              </li>
+              <li>
+                <span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
+                <span>Branding: Marca, Logotipo, Naming y Marketing <span class="cert-source">Udemy · 2025</span></span>
+              </li>
+              <li>
+                <span class="cert-dot cert-dot--blue" aria-hidden="true"></span>
+                <span>Copywriting para Negocios Online <span class="cert-source">Udemy · 2025</span></span>
+              </li>
             </ul>
           </div>
 
@@ -310,8 +410,10 @@
               <span class="cert-group__title">Liderazgo y Soft Skills</span>
             </div>
             <ul class="cert-list">
-              <li><span class="cert-dot cert-dot--amber" aria-hidden="true"></span>
-                <span>Liderazgo y Gestión de Equipos <span class="cert-source">Udemy · 2024</span></span></li>
+              <li>
+                <span class="cert-dot cert-dot--amber" aria-hidden="true"></span>
+                <span>Liderazgo y Gestión de Equipos <span class="cert-source">Udemy · 2024</span></span>
+              </li>
             </ul>
           </div>
         </div>
@@ -322,7 +424,7 @@
       <section class="page" id="page-contacto" data-title="Contacto">
         <div class="page-header">
           <h2 class="page-title">Contacto</h2>
-          <p class="page-sub">¡Contactáme!</p>
+          <p class="page-sub">Estoy disponible para nuevos proyectos</p>
         </div>
 
         <div class="contact-grid">
@@ -333,13 +435,7 @@
             <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
           </a>
           <a href="https://linkedin.com/in/silvina-betarte-ux-ui" target="_blank" rel="noopener" class="ctile" aria-label="LinkedIn">
-<div class="ctile__ico ctile__ico--blue">
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-    <rect x="2" y="9" width="4" height="12"/>
-    <circle cx="4" cy="4" r="2"/>
-  </svg>
-</div>           
+            <div class="ctile__ico ctile__ico--blue"><i data-lucide="linkedin"></i></div>
             <div class="ctile__lbl">LinkedIn</div>
             <div class="ctile__val">silvina-betarte-ux-ui</div>
             <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
@@ -350,11 +446,10 @@
             <div class="ctile__val">+598 95700457</div>
             <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
           </a>
-          <a href="CV-SILVINA-BETARTE.pdf" target="_blank" rel="noopener"
-             class="ctile ctile--accent" aria-label="Ver curriculum en PDF">
-            <div class="ctile__ico ctile__ico--white"><i data-lucide="file-text"></i></div>
-            <div class="ctile__lbl">Curriculum</div>
-            <div class="ctile__val">Ver / Descargar CV</div>
+          <a href="#" class="ctile ctile--accent" aria-label="Ver portfolio">
+            <div class="ctile__ico ctile__ico--white"><i data-lucide="layout-dashboard"></i></div>
+            <div class="ctile__lbl">Portfolio</div>
+            <div class="ctile__val">Portfolio Interactivo</div>
             <i data-lucide="arrow-up-right" class="ctile__arr" aria-hidden="true"></i>
           </a>
         </div>
@@ -367,12 +462,11 @@
           </div>
         </div>
 
+        <!-- CTA Hero -->
         <div class="contact-cta">
-          <div class="contact-cta__av">
-            <img src="IMG_1709.png" alt="Silvina Betarte" />
-          </div>
+          <div class="contact-cta__av"><span>SB</span></div>
           <p class="contact-cta__text">¿Tenés un proyecto en mente? <strong>¡Hablemos!</strong></p>
-          <!--<div class="avail-green"><span class="dot dot--pulse"></span>¡Contactáme!</div>-->
+          <div class="avail-green"><span class="dot dot--pulse"></span>Disponible para proyectos</div>
           <button class="open-form-btn" id="openFormBtn" aria-expanded="false" aria-controls="contactForm">
             <i data-lucide="mail"></i>
             Enviame un mensaje
@@ -380,6 +474,7 @@
           </button>
         </div>
 
+        <!-- Contact Form (accordion) -->
         <div class="cf-wrap" id="contactForm" aria-hidden="true">
           <div class="card cf-card">
             <div class="card__label">Enviame un mensaje</div>
