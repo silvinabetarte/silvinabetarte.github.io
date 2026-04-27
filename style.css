@@ -861,18 +861,24 @@ img { display:block; max-width:100%; }
 .top-bar__photo {
   width: 36px;
   height: 36px;
+  min-width: 36px;
+  max-width: 36px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
   border: 2px solid var(--salmon);
   box-shadow: 0 2px 8px rgba(255,118,117,.3);
+  position: relative;
 }
 .top-bar__photo img {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   display: block;
+  border-radius: 50%;
 }
 .top-bar__name {
   flex: 1;
