@@ -856,3 +856,31 @@ img { display:block; max-width:100%; }
   border-radius: 6px; padding: 1px 6px;
   vertical-align: middle;
 }
+
+/* ── TOP BAR PHOTO & NAME ── */
+.top-bar__photo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--salmon);
+  box-shadow: 0 2px 8px rgba(255,118,117,.3);
+}
+.top-bar__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.top-bar__name {
+  flex: 1;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
