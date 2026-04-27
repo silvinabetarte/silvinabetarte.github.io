@@ -504,81 +504,99 @@ img { display:block; max-width:100%; }
 
 /* ── TAB BAR ── */
 /*
-  Strategy: each .tab is a flex column.
-  .tab__ring is the coral circle — it's a sibling of the icon & label,
-  absolutely positioned at the top of the tab, centered horizontally.
-  When active: ring scales to 1, icon lifts via translateY, turns white.
-  The tab bar has overflow:visible so the ring can emerge above the border line.
+  TAB BAR — estrategia definitiva:
+  - Ring e ícono son ambos position:absolute en la misma posición (top:8px, centrado)
+  - Así el ícono siempre está perfectamente centrado DENTRO del círculo
+  - El label queda al fondo via justify-content:flex-end
+  - Todo dentro del tab bar → no hay clipping
 */
 .tab-bar {
-  flex-shrink:0;
-  height:var(--tabbar-h);
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(20px) saturate(1.4);
-  -webkit-backdrop-filter:blur(20px) saturate(1.4);
-  border-top:1px solid var(--border);
-  display:flex; align-items:stretch;
-  position:relative; z-index:10;
-  overflow:visible; /* critical: allow ring to pop above the border */
-  padding-bottom:env(safe-area-inset-bottom, 0px);
+  flex-shrink: 0;
+  height: var(--tabbar-h); /* 80px */
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  z-index: 10;
+  overflow: hidden; /* todo dentro — sin clipping externo */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .tab {
-  flex:1; display:flex; flex-direction:column;
-  align-items:center; justify-content:flex-start;
-  padding-top:14px; gap:3px;
-  position:relative; overflow:visible;
-  background:none; border:none;
-  transition:none; /* item itself does NOT move — only icon moves */
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;  /* label pegado al fondo */
+  padding-bottom: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* Coral ring — centered absolutely, starts at top of tab-bar */
+/* Círculo coral — mismo lugar que el ícono */
 .tab__ring {
-  position:absolute;
-  top:-24px;       /* half of 48px, straddles the tab-bar top edge */
-  left:50%;
-  transform:translateX(-50%) scale(0);
-  width:48px; height:48px; border-radius:50%;
-  background:var(--salmon);
-  box-shadow:0 6px 18px rgba(255,118,117,.45);
-  transition:transform .3s var(--ease-spring), opacity .25s ease;
-  opacity:0;
-  z-index:0; pointer-events:none;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transform-origin: center center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--salmon);
+  box-shadow: 0 6px 18px rgba(255,118,117,.4);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+  transition: transform .32s var(--ease-spring), opacity .22s ease;
 }
 
-/* Icon — sits on top of ring via z-index */
+/* Ícono — exactamente sobre el ring */
 .tab__ico {
-  width:48px; height:48px;
-  display:flex; align-items:center; justify-content:center;
-  color:var(--ink-3); position:relative; z-index:2;
-  transition:transform .3s var(--ease-spring), color .25s ease;
-  flex-shrink:0;
-  /* default: icon is at padding-top:14px position */
-  /* the ring is at top:-24px, so ring center = padding-top+0 = 14px from top of tab */
-  /* we need icon center to align with ring center                                    */
-  /* ring center from top of tab = -24px + 24px (half of 48px) = 0px from top of tab */
-  /* icon starts at 14px from top. We need it at 14px + some amount when active.     */
-  /* Actually, we lift the icon when active to sit on top of the ring.               */
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-3);
+  z-index: 2;
+  pointer-events: none;
+  transition: color .22s ease;
 }
-.tab__ico svg { width:22px; height:22px; }
+.tab__ico svg { width: 22px; height: 22px; }
 
+/* Label */
 .tab__lbl {
-  font-size:.61rem; font-weight:600; color:var(--ink-3);
-  letter-spacing:.02em; line-height:1; position:relative; z-index:2;
-  transition:color .2s;
+  font-size: .61rem;
+  font-weight: 600;
+  color: var(--ink-3);
+  letter-spacing: .02em;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  transition: color .2s;
+  pointer-events: none;
 }
 
-/* ACTIVE STATE */
+/* ACTIVE */
 .tab.active .tab__ring {
-  transform:translateX(-50%) scale(1);
-  opacity:1;
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
 }
 .tab.active .tab__ico {
-  transform:translateY(-22px);  /* lift icon up to be inside the ring */
-  color:#fff;
+  color: #fff;
 }
 .tab.active .tab__lbl {
-  color:var(--salmon);
+  color: var(--salmon);
 }
 
 /* ── OVERLAY (mobile) ── */
@@ -815,41 +833,4 @@ img { display:block; max-width:100%; }
   background: var(--bg); border: 1px solid var(--border);
   border-radius: 6px; padding: 1px 6px;
   vertical-align: middle;
-}
-.side-menu__avatar img,
-.profile-hero__av img,
-.contact-cta__av img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-}
-
-
-/* TOP BAR PHOTO */
-.top-bar__photo {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 2px solid var(--salmon);
-  box-shadow: 0 2px 8px rgba(255,118,117,.3);
-}
-.top-bar__photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.top-bar__name {
-  flex: 1;
-  font-size: .82rem;
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
