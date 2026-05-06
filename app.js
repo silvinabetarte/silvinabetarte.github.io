@@ -16,7 +16,7 @@ const PREVIEWS = {
     html: `
       <div class="pv-stats">
         <div class="pv-stat"><span class="pv-stat__n">10+</span><span class="pv-stat__l">Años</span></div>
-        <div class="pv-stat"><span class="pv-stat__n">50+</span><span class="pv-stat__l">Proyectos</span></div>
+        <div class="pv-stat"><span class="pv-stat__n">20+</span><span class="pv-stat__l">Proyectos</span></div>
         <div class="pv-stat"><span class="pv-stat__n">A11y</span><span class="pv-stat__l">WCAG</span></div>
       </div>
       <div class="pv-tags">
