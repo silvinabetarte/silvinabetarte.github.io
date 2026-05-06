@@ -41,16 +41,16 @@ const PREVIEWS = {
     icon: 'graduation-cap', title: 'Formación', sub: 'Títulos y certificaciones',
     html: `
       <div class="pv-bar-row"><div class="pv-bar-lbl">Experto UX/UI · ITBA</div>
-        <div class="pv-bar"><div class="pv-bar__fill" style="width:95%"></div></div>
+        <div class="pv-bar"><div class="pv-bar__fill" style="width:100%"></div></div>
       </div>
       <div class="pv-bar-row"><div class="pv-bar-lbl">Scrum Master Padawan</div>
-        <div class="pv-bar"><div class="pv-bar__fill" style="width:90%"></div></div>
+        <div class="pv-bar"><div class="pv-bar__fill" style="width:1000%"></div></div>
       </div>
-      <div class="pv-bar-row"><div class="pv-bar-lbl">Desarrollo de Apps · CoderHose</div>
-        <div class="pv-bar"><div class="pv-bar__fill" style="width:70%"></div></div>
+      <div class="pv-bar-row"><div class="pv-bar-lbl">Experto Desarrollo FullStack · IBEC</div>
+        <div class="pv-bar"><div class="pv-bar__fill" style="width:100%"></div></div>
       </div>
       <div class="pv-bar-row"><div class="pv-bar-lbl">Desarrollo Web PHP & MySQL</div>
-        <div class="pv-bar"><div class="pv-bar__fill" style="width:85%"></div></div>
+        <div class="pv-bar"><div class="pv-bar__fill" style="width:100%"></div></div>
       </div>`
   },
   contacto: {
