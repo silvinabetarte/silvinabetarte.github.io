@@ -28,7 +28,7 @@ const PREVIEWS = {
     icon: 'briefcase', title: 'Trabajo', sub: 'Experiencia profesional',
     html: `
       <div class="pv-item"><div class="pv-dot"></div>
-        <div class="pv-text"><strong>Freelance · 2022–Hoy</strong>Alianza de Pacientes Uruguay</div>
+        <div class="pv-text"><strong>Freelance · 2026–Hoy</strong>Alianza de Pacientes Uruguay</div>
       </div>
       <div class="pv-item"><div class="pv-dot pv-dot--blue"></div>
         <div class="pv-text"><strong>Telefónica · 2019–2025</strong>UX/UI Lead & Coordinadora</div>
@@ -51,7 +51,10 @@ const PREVIEWS = {
       </div>
       <div class="pv-bar-row"><div class="pv-bar-lbl">Desarrollo Web PHP & MySQL</div>
         <div class="pv-bar"><div class="pv-bar__fill" style="width:100%"></div></div>
+      <div class="pv-bar-row"><div class="pv-bar-lbl">Dirección de arte | Redacción creativa</div>
+        <div class="pv-bar"><div class="pv-bar__fill" style="width:100%"></div></div>
       </div>`
+     
   },
   contacto: {
     icon: 'send', title: 'Contacto', sub: 'Disponible para proyectos',
